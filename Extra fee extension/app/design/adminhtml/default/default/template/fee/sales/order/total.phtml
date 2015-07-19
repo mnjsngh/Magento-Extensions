@@ -1,0 +1,13 @@
+<?php $this->setPriceDataObject($this->getSource()) ?>
+<?php if ((float) $this->getSource()->getFeeAmount()): ?>
+	<?php 
+	$price = $this->getSource()->getFeeAmount();
+	$price1 = $this->getSource()->getBaseFeeAmount();
+	?>
+    <tr>
+        <td class="label"><?php echo Mage::helper('fee')->getFeeLabel(); ?></td>
+        <td>
+            <?php echo $this->displayPrices($price, $price1); ?>
+        </td>
+    </tr>
+<?php endif; ?>

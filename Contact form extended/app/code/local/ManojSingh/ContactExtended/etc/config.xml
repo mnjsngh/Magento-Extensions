@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <ManojSingh_ContactExtended>
+      <version>0.1.0</version>
+    </ManojSingh_ContactExtended>
+  </modules>
+  <frontend>
+        <routers>
+            <contacts>
+                <args>
+                    <modules>
+                        <ManojSingh_ContactExtended before="Mage_Contacts">ManojSingh_ContactExtended</ManojSingh_ContactExtended>
+                    </modules>
+                </args>
+            </contacts>
+        </routers>
+  </frontend>
+  <global>
+    <helpers>
+      <contactextended>
+        <class>ManojSingh_ContactExtended_Helper</class>
+      </contactextended>
+    </helpers>
+  </global>
+</config> 

@@ -1,4 +1,4 @@
-Extra fee extension allows you to charge extra fee to your cart totals.
+Extra fee extension allows you to charge extra fee to your cart totals. And it works with paypal payment method also.
 
 In admin goto System->Configuration->Additional fee extension->Manage fee and enter the fee amount.
 

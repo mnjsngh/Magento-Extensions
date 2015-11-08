@@ -1,0 +1,15 @@
+#priceplus {background: #5f573a;display: inline-block;height: 27px;margin-right: 3px;width: 27px;bottom: -6px;text-align: center;font-size: 30px;
+    position: relative;color: #fff;line-height: 27px;cursor: pointer;}
+#priceminus {background: #5f573a;display: inline-block;height: 27px;width: 27px;bottom: -3px;text-align: center;font-size: 30px;
+    position: relative;color: #fff;line-height: 22px;cursor: pointer;}
+.product-collateral > dl > dd.current{float: left;}
+.pscontainer #newprice {background: none;border: medium none; text-align: right;width: 141px;user-select:none;-moz-user-select: none;-webkit-user-select: none;
+margin-bottom: 2px;font-weight: bold;font-size: 16px;}
+.sp-label{display:inline-block;}
+.sp-box{display: inline-block;padding:10px 15px;background: #F3F3F3;}
+
+#reductprice{font-size: 16px;font-weight: bold;}
+span.info-icon{font-size: 25px;font-weight: bold;font-style: italic;font-family: initial;width: 33px;height: 33px;display: inline-block;
+text-align: center;background: #5f573a;border-radius: 16px;color: #fff;line-height: 32px;}
+.pscontainer {display: block;float: left;width: 100%;border: 1px solid #ebebeb;}
+.pscontainer .fieldset{border:none;}

@@ -1,0 +1,75 @@
+<?php $pro = Mage::registry('current_product');
+$Price = Mage::helper('core')->currency($pro->getFinalPrice(), true, false);
+$dedPrice = Mage::helper('core')->currency(0, true, false);
+ ?>
+ <h3><?php echo $this->__('Start price request for "%s"',$pro->getName()); ?></h3>
+<div class="pscontainer">
+            <div class="col-md-6">
+			<form action="<?php echo $this->getUrl('suggestprice/index/suggest'); ?>" method="post" id="ps-form">
+			<div class="fieldset">
+			<ul class="form-list">
+				<li class="fields">
+						<div class="input-box">
+						<div class="sp-box">
+						<h4 class="sp-label"><?php echo $this->__('Suggested Price'); ?></h4>
+							<input type="text" value="<?php echo $Price; ?>" id="newprice" name="newprice" class="input-text">
+							<span id="priceplus">+</span><span id="priceminus">-</span> 
+						</div>
+						</div>
+				</li>
+				<li class="fields">
+					<div class="input-box">
+					<div class="red-box">
+						<h4 class="sp-label"><?php echo $this->__('Reduction'); ?></h4> 
+						<span id="reductprice"><?php echo $dedPrice; ?></span>
+					</div>
+					</div>
+				</li>
+				<!--<li class="fields">
+					&nbsp;
+				</li>-->
+            	<li class="fields">
+				<label><?php echo $this->__('Name'); ?><span class="required"><em>*</em></span></label>
+				<div class="input-box">
+					<input type="text" id="psname" name="psname" class="input-text required-entry">
+				</div>
+				</li>
+				<li class="fields">
+				<label><?php echo $this->__('Email'); ?><span class="required"><em>*</em></span></label>
+				<div class="input-box">
+					<input type="text" id="psemail" name="psemail" class="input-text validate-email required-entry">
+				</div>
+				</li>
+				<li class="fields">
+				<label><?php echo $this->__('Phone'); ?></label>
+				<div class="input-box">	
+					<input type="text" id="psphone" name="psphone" class="input-text">
+				</div>
+				</li>
+				<li class="fields">
+					<label><?php echo $this->__('Comments'); ?></label>
+					<div class="input-box">
+						<textarea id="pscomments" name="pscomments" class="input-text"></textarea>
+					</div>
+				</li>
+				<li class="fields">
+					<div class="button-set">
+						<button value="SUBMIT" class="button" name="SUBMIT" type="submit"><span><span><?php echo $this->__('Submit'); ?></span></span></button>
+					</div>
+				</li>
+			</ul>	
+				<input type="hidden" value="<?php echo $pro->getSku(); ?>" name="ps_productsku" id="ps_productsku">
+				<input type="hidden" value="<?php echo $Price; ?>" name="ps_price" id="orig_price">
+				<input type="hidden" value="<?php echo $pro->getName(); ?>" name="ps_productname" id="pname">
+				<input type="hidden" value="<?php echo $dedPrice; ?>" name="ps_reduced" id="ps_reduced">
+				<input type="hidden" value="<?php echo Mage::app()->getLocale()->currency( $currency_code )->getSymbol(); ?>" id="currency">
+			</div>
+
+			</form>
+			</div>
+</div>
+<script type="text/javascript">
+//< ![CDATA[
+var spForm = new VarienForm('ps-form');
+//]]>
+</script>		

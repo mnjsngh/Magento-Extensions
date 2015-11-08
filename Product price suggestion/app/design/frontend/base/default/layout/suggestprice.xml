@@ -1,0 +1,18 @@
+<?xml version="1.0"?>   
+<layout>
+    <catalog_product_view>
+		<reference name="head">
+			<action method="addItem">
+				<type>js</type>
+				<name>suggestprice/suggest.js</name>
+			</action>
+			<action method="addCss"><stylesheet>css/suggest.css</stylesheet></action>
+		</reference>	
+        <reference name="product.info">
+			<block type="suggestprice/index" name="suggestprice_index" template="suggestprice/suggested_price.phtml">   
+                <action method="addToParentGroup"><group>detailed_info</group></action>
+                <action method="setTitle" translate="value"><value>Price suggestion</value></action>
+            </block>
+        </reference>
+    </catalog_product_view>
+</layout>

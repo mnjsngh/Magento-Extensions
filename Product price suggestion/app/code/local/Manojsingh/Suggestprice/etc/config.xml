@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Manojsingh_Suggestprice>
+      <version>0.1.0</version>
+    </Manojsingh_Suggestprice>
+  </modules>
+  <frontend>
+    <routers>
+      <suggestprice>
+        <use>standard</use>
+          <args>
+            <module>Manojsingh_Suggestprice</module>
+            <frontName>suggestprice</frontName>
+          </args>
+      </suggestprice>
+    </routers>
+		<layout>
+		  <updates>
+			<suggestprice>
+			  <file>suggestprice.xml</file>
+			</suggestprice>
+		  </updates>
+		</layout>
+  </frontend>
+  <global>
+    <helpers>
+      <suggestprice>
+        <class>Manojsingh_Suggestprice_Helper</class>
+      </suggestprice>
+    </helpers>
+	<blocks>
+	  <suggestprice>
+		<class>Manojsingh_Suggestprice_Block</class>
+	  </suggestprice>
+	</blocks>
+	<template>
+			<email>
+				<suggest_price_suggest_email_template translate="label" module="suggestprice">
+					<label>Price suggestion Email</label>
+					<file>suggestprice/price-suggest.html</file>
+					<type>html</type>
+				</suggest_price_suggest_email_template>
+			</email>
+	</template>
+  </global>
+  <default>
+        <suggest_price>
+            <suggest>
+			<email_name>Admin</email_name> 	
+			<email_address>owner@example.com</email_address>
+			<email_subject>Price Suggestion</email_subject> 
+			<email_template>suggest_price_suggest_email_template</email_template>
+			<success_message>Thank you for your price suggestion.</success_message>
+			</suggest>
+		</suggest_price>		
+	</default>
+</config> 

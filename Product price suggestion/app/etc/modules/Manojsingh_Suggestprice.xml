@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Manojsingh_Suggestprice>
+      <active>true</active>
+      <codePool>local</codePool>
+      <version>0.1.0</version>
+    </Manojsingh_Suggestprice>
+  </modules>
+</config>

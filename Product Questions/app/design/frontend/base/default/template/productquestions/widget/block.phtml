@@ -1,0 +1,11 @@
+<?php if ($this->collection->getSize() > 0) { ?>
+<ol style="list-style: none;">
+    <?php foreach ($this->collection as $item) { ?>
+    <li>
+        <span style="padding-right: 10px;"><i><?php echo $this->getDate($item)?></i></span>
+        <a href="<?php echo $this->getUrlQuestions($item)?>"><?php echo $item->getQuestionProductName()?></a><br>
+        <div style="padding-bottom: 5px;"><?php echo $this->getQuestion($item);?></div>
+    </li>
+    <?php } ?>
+</ol>
+<?php } ?>

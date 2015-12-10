@@ -1,0 +1,17 @@
+
+<phpunit>
+    <!-- copy this file to root directory and use it for tests -->
+    <filter>
+        <blacklist>
+            <file>app/Mage.php</file>
+            <directory suffix=".php">app/code/core</directory>
+            <directory suffix=".php">app/code/community</directory>
+            <directory suffix=".php">app/code/local/Manojsingh/All</directory>
+            <directory suffix=".php">app/code/local/Manojsingh/Core</directory>
+            <directory suffix=".php">app/code/local/Manojsingh/Advancednewsletter</directory>
+            <directory suffix=".phtml">app/design/frontend/base</directory>
+            <directory suffix=".php">lib</directory>
+            <directory suffix=".php">app/code/community/EcomDev</directory>
+        </blacklist>
+    </filter>
+</phpunit>

@@ -1,0 +1,18 @@
+<?php
+$questionCount = $this->getQuestionCount();
+?>
+<div>
+<?php if (Manojsingh_Productquestions_Helper_Data::checkIfGuestsAllowed()): ?>
+        <?php if ($questionCount): ?>
+            <a href="<?php echo $this->getQuestionsPageUrl() ?>"><?php echo $this->__('Stellen Sie eine Frage. (%d Fragen bisher)', $questionCount); ?></a>
+        <?php else: ?>
+            <a href="<?php echo $this->getQuestionsPageUrl() ?>"><?php echo $this->__('Stellen Sie eine Frage zu diesem Produkt.'); ?></a>
+        <?php endif; ?>
+    <?php else: ?>
+        <?php if ($questionCount): ?>
+            <a href="<?php echo $this->getQuestionsPageUrl() ?>"><?php echo $this->__('Fragen ansehen (%d)<br />', $questionCount) ?></a>
+        <?php else: ?>
+            <?php echo Mage::helper('productquestions')->getPleaseRegisterMessage(); ?>
+        <?php endif; ?>
+    <?php endif; ?>
+</div>

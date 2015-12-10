@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+    <productquestions_block type="productquestions/widget_block" translate="name description" module="productquestions">
+        <name>Manojsingh Product Questions</name>
+        <is_email_compatible>0</is_email_compatible>
+        <parameters>
+            <num_questions translate="label description">
+                <label>Public answered questions</label>
+                <required>1</required>
+                <description></description>
+                <visible>1</visible>
+                <type>text</type>
+                <value>5</value>
+            </num_questions>
+            <url_type translate="label description">
+                <label>Titles Link to:</label>
+                <required>1</required>
+                <description></description>
+                <visible>1</visible>
+                <value>0</value>
+                <type>select</type>
+                <values>
+                    <default translate="label">
+                        <value>0</value>
+                        <label>product questions page</label>
+                    </default>
+                    <list translate="label">
+                        <value>1</value>
+                        <label>product page</label>
+                    </list>
+                </values>
+            </url_type>
+        </parameters>
+    </productquestions_block>
+</widgets>

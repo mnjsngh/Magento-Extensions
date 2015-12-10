@@ -1,0 +1,48 @@
+<?php
+$questions = $this->_collection;
+?>
+<div class="productquestions-container">
+    
+	<?php echo $this->getChildHtml('productquestions_form'); ?>
+
+    <?php if ($questions->getSize()): ?>
+        <?php echo $this->getChildHtml('productquestions_sorter'); ?>
+        <?php if ($this->getShowPager()){
+            echo $this->getChildHtml('productquestions_pager');
+		}?>
+
+        <ul>
+            <?php foreach ($questions->getItems() as $q): ?>
+                <a name="<?php echo $q->getId() ?>"> </a>
+                <li class="record"><b><?php echo $q->getQuestionAuthorName() ?></b> - <span class="date"><?php echo $this->formatDate($q->getQuestionDate()) ?> <?php echo $this->formatTime($q->getQuestionDate()) ?></span>
+                    <ul >
+                        <li class="question"><?php echo nl2br(htmlentities($q->getQuestionText(), null, 'UTF-8')) ?></li>
+                        <li class="reply"><em><?php echo Manojsingh_Productquestions_Helper_Data::parseURLsIntoLinks($q->getQuestionReplyText()) ?></em></li>
+                        <?php if ($this->getVotingAllowed()): ?>
+                            <li class="helpfulness"><?php echo $this->__('Helpful?'); ?>&nbsp;
+                                <strong>
+                                    <a style="color: green; cursor:pointer;" <?php if(!$q->IsVoted()){ ?> onclick="setLocation('<?php echo $this->getUrl('productquestions/index/vote', array('id' => $q->getId(), 'value' => 1)) ?>')" <?php } ?>><?php echo $this->__('Yes').' '.$q->getVoteYes(); ?></a>
+                                </strong>
+                                &nbsp;
+                                <strong>
+                                    <a style="color: red; cursor:pointer;" <?php if(!$q->IsVoted()){ ?> onclick="setLocation('<?php echo $this->getUrl('productquestions/index/vote', array('id' => $q->getId(), 'value' => 0)) ?>')" <?php } ?>><?php echo $this->__('No').' '.$q->getVoteNo(); ?></a>
+                                </strong>
+								&nbsp;
+                                <strong>
+                                    <a style="color: red; cursor:pointer;" <?php if(!$q->IsReported()){ ?> onclick="setLocation('<?php echo $this->getUrl('productquestions/index/report', array('id' => $q->getId(), 'value' => 1)) ?>')" <?php } ?>><?php echo $this->__('Report').' '.$q->getVoteReport(); ?></a>
+                                </strong>
+                            </li>
+                        <?php endif; ?>
+                    </ul>
+                </li>
+            <?php endforeach; ?> 
+        </ul>
+    <?php else: ?>
+        <p><?php echo $this->__('No questions asked yet'); ?></p>
+    <?php endif; ?>
+
+
+    <?php if (Mage::registry('manojsinghpq_controller')): ?>
+        <a href="<?php echo $this->getProduct()->getProductUrl(); ?>">  <?php echo $this->__('Back to the product page'); ?></a>
+    <?php endif; ?>
+</div>

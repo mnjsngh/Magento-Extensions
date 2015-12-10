@@ -1,0 +1,12 @@
+tables:
+  manojsingh_advancednewsletter_segment:
+    -
+      segment_id: 1
+      title: segment1
+      code: segment1
+      default_store: 0
+      default_category: 0
+      display_in_store: 0
+      display_in_category: 0
+      frontend_visibility: 1
+      display_order: 0

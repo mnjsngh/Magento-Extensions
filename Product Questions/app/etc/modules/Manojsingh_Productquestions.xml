@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Manojsingh_Productquestions>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Manojsingh_Productquestions>
+    </modules>
+</config> 

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">	
+	<productquestions_index_index>
+        <reference name="content">
+            <block type="productquestions/questions" name="productquestions" >
+                <block type="productquestions/sorter" name="productquestions_sorter" />
+                <block type="page/html_pager" name="productquestions_pager" />
+                <block type="productquestions/form" name="productquestions_form" />
+            </block>
+        </reference>
+    </productquestions_index_index>
+	<catalog_product_view>
+		<reference name="product.info">
+			<block type="productquestions/questions" name="productquestions" >
+                <block type="productquestions/sorter" name="productquestions_sorter" />
+                <block type="page/html_pager" name="productquestions_pager" />
+                <block type="productquestions/form" name="productquestions_form" />
+            </block>
+			
+			<block type="productquestions/questions" name="product.questions" as="questions" template="productquestions/questions.phtml">
+                <action method="addToParentGroup"><group>detailed_info</group></action>
+                <action method="setTitle" translate="value"><value>Productquestions</value></action>
+				<action method="append"><block>productquestions_sorter</block></action>
+				<action method="append"><block>productquestions_pager</block></action>
+				<action method="append"><block>productquestions_form</block></action>
+            </block>
+		</reference>
+	</catalog_product_view>	
+</layout>

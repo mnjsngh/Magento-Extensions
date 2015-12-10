@@ -1,0 +1,54 @@
+tables:
+  productquestions/productquestions:
+    - 
+      question_id: 1
+      question_status: 1
+      question_product_id: 12
+      question_store_id: 2
+      question_store_ids: 2
+      question_product_name: The Great Gatsby
+      question_author_name: customer
+      question_author_email: customer@customer.com
+      question_date: 2011-10-26 10:27:47
+      question_text: question1
+      question_reply_text: reply
+    - 
+      question_id: 2
+      question_status: 2
+      question_product_id: 12
+      question_store_id: 2
+      question_store_ids: 2
+      question_product_name: The Great Gatsby
+      question_author_name: customer2
+      question_author_email: customer@@customer.com
+      question_date: 2011-10-26 13:46:53
+      question_text: |
+        question2
+        question2
+      question_reply_text:
+    -
+      question_id: 3
+      question_status: 2
+      question_product_id: 12
+      question_store_id: 1
+      question_store_ids: 1
+      question_product_name: The Great Gatsby
+      question_author_name: 
+      question_author_email: customer@customer.com
+      question_date: 2011-10-26 13:46:53
+      question_text: |
+        question2
+        question2
+      question_reply_text:
+    -
+      question_id: 4
+      question_status: 2
+      question_product_id: 12
+      question_store_id: 1
+      question_store_ids: 1
+      question_product_name: The Great Gatsby
+      question_author_name: customer2
+      question_author_email: customer@customer.com
+      question_date: 2011-10-26 13:46:53
+      question_text:
+      question_reply_text:

@@ -1,0 +1,85 @@
+<?php
+$isSubscribed = false;
+?>
+
+<script type="text/javascript">
+    eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('1D=o(p){o Q(L,1x){h(L<<1x)|(L>>>(32-1x))}o e(1l,1j){f 1k,1o,C,D,w;C=(1l&1p);D=(1j&1p);1k=(1l&1n);1o=(1j&1n);w=(1l&1C)+(1j&1C);B(1k&1o){h(w^1p^C^D)}B(1k|1o){B(w&1n){h(w^2a^C^D)}1h{h(w^1n^C^D)}}1h{h(w^C^D)}}o F(x,y,z){h(x&y)|((~x)&z)}o G(x,y,z){h(x&z)|(y&(~z))}o H(x,y,z){h(x^y^z)}o I(x,y,z){h(y^(x|(~z)))}o m(a,b,c,d,x,s,u){a=e(a,e(e(F(b,c,d),x),u));h e(Q(a,s),b)};o j(a,b,c,d,x,s,u){a=e(a,e(e(G(b,c,d),x),u));h e(Q(a,s),b)};o i(a,b,c,d,x,s,u){a=e(a,e(e(H(b,c,d),x),u));h e(Q(a,s),b)};o l(a,b,c,d,x,s,u){a=e(a,e(e(I(b,c,d),x),u));h e(Q(a,s),b)};o 1F(p){f A;f P=p.1f;f 1q=P+8;f 1B=(1q-(1q%1G))/1G;f 1m=(1B+1)*16;f t=1J(1m-1);f S=0;f q=0;28(q<P){A=(q-(q%4))/4;S=(q%4)*8;t[A]=(t[A]|(p.1H(q)<<S));q++}A=(q-(q%4))/4;S=(q%4)*8;t[A]=t[A]|(1X<<S);t[1m-2]=P<<3;t[1m-1]=P>>>29;h t};o Y(L){f 1i="",1g="",1y,1d;1v(1d=0;1d<=3;1d++){1y=(L>>>(1d*8))&2h;1g="0"+1y.25(16);1i=1i+1g.26(1g.1f-2,2)}h 1i};o 1E(p){p=p.24(/\\r\\n/g,"\\n");f v="";1v(f n=0;n<p.1f;n++){f c=p.1H(n);B(c<1e){v+=J.E(c)}1h B((c>1Z)&&(c<1V)){v+=J.E((c>>6)|1W);v+=J.E((c&1t)|1e)}1h{v+=J.E((c>>12)|1Y);v+=J.E(((c>>6)&1t)|1e);v+=J.E((c&1t)|1e)}}h v};f x=1J();f k,1w,1r,1s,1u,a,b,c,d;f 1a=7,U=12,R=17,K=22;f 18=5,X=9,W=14,Z=20;f V=4,19=11,1b=16,M=23;f T=6,O=10,N=15,1c=21;p=1E(p);x=1F(p);a=2g;b=1U;c=2i;d=2f;1v(k=0;k<x.1f;k+=16){1w=a;1r=b;1s=c;1u=d;a=m(a,b,c,d,x[k+0],1a,2e);d=m(d,a,b,c,x[k+1],U,2b);c=m(c,d,a,b,x[k+2],R,2c);b=m(b,c,d,a,x[k+3],K,2d);a=m(a,b,c,d,x[k+4],1a,2j);d=m(d,a,b,c,x[k+5],U,1L);c=m(c,d,a,b,x[k+6],R,1K);b=m(b,c,d,a,x[k+7],K,1O);a=m(a,b,c,d,x[k+8],1a,1R);d=m(d,a,b,c,x[k+9],U,1Q);c=m(c,d,a,b,x[k+10],R,1M);b=m(b,c,d,a,x[k+11],K,1N);a=m(a,b,c,d,x[k+12],1a,1T);d=m(d,a,b,c,x[k+13],U,1P);c=m(c,d,a,b,x[k+14],R,1S);b=m(b,c,d,a,x[k+15],K,27);a=j(a,b,c,d,x[k+1],18,2H);d=j(d,a,b,c,x[k+6],X,3a);c=j(c,d,a,b,x[k+11],W,30);b=j(b,c,d,a,x[k+0],Z,2Q);a=j(a,b,c,d,x[k+5],18,2T);d=j(d,a,b,c,x[k+10],X,2k);c=j(c,d,a,b,x[k+15],W,2Z);b=j(b,c,d,a,x[k+4],Z,2V);a=j(a,b,c,d,x[k+9],18,2U);d=j(d,a,b,c,x[k+14],X,2X);c=j(c,d,a,b,x[k+3],W,2Y);b=j(b,c,d,a,x[k+8],Z,2O);a=j(a,b,c,d,x[k+13],18,2N);d=j(d,a,b,c,x[k+2],X,2P);c=j(c,d,a,b,x[k+7],W,2R);b=j(b,c,d,a,x[k+12],Z,37);a=i(a,b,c,d,x[k+5],V,39);d=i(d,a,b,c,x[k+8],19,3b);c=i(c,d,a,b,x[k+11],1b,3c);b=i(b,c,d,a,x[k+14],M,38);a=i(a,b,c,d,x[k+1],V,33);d=i(d,a,b,c,x[k+4],19,34);c=i(c,d,a,b,x[k+7],1b,35);b=i(b,c,d,a,x[k+10],M,36);a=i(a,b,c,d,x[k+13],V,31);d=i(d,a,b,c,x[k+0],19,2S);c=i(c,d,a,b,x[k+3],1b,2L);b=i(b,c,d,a,x[k+6],M,2t);a=i(a,b,c,d,x[k+9],V,2s);d=i(d,a,b,c,x[k+12],19,2m);c=i(c,d,a,b,x[k+15],1b,2l);b=i(b,c,d,a,x[k+2],M,2n);a=l(a,b,c,d,x[k+0],T,2o);d=l(d,a,b,c,x[k+7],O,2p);c=l(c,d,a,b,x[k+14],N,2x);b=l(b,c,d,a,x[k+5],1c,2y);a=l(a,b,c,d,x[k+12],T,2I);d=l(d,a,b,c,x[k+3],O,2J);c=l(c,d,a,b,x[k+10],N,2K);b=l(b,c,d,a,x[k+1],1c,2F);a=l(a,b,c,d,x[k+8],T,2E);d=l(d,a,b,c,x[k+15],O,2A);c=l(c,d,a,b,x[k+6],N,2z);b=l(b,c,d,a,x[k+13],1c,2C);a=l(a,b,c,d,x[k+4],T,2D);d=l(d,a,b,c,x[k+11],O,2q);c=l(c,d,a,b,x[k+2],N,2B);b=l(b,c,d,a,x[k+9],1c,2G);a=e(a,1w);b=e(b,1r);c=e(c,1s);d=e(d,1u)}f 1A=Y(a)+Y(b)+Y(c)+Y(d);h 1A.2M()};2r=o(){f 1z=$(\'1I\').2w();B(!2v(1z))$(\'1I\').2u(1D(1z));h 2W}',62,199,'||||||||||||||AddUnsigned|var||return|HH|GG||II|FF||function|string|lByteCount|||lWordArray|ac|utftext|lResult||||lWordCount|if|lX8|lY8|fromCharCode|||||String|S14|lValue|S34|S43|S42|lMessageLength|RotateLeft|S13|lBytePosition|S41|S12|S31|S23|S22|WordToHex|S24|||||||||S21|S32|S11|S33|S44|lCount|128|length|WordToHexValue_temp|else|WordToHexValue|lY|lX4|lX|lNumberOfWords|0x40000000|lY4|0x80000000|lNumberOfWords_temp1|BB|CC|63|DD|for|AA|iShiftBits|lByte|auth_key|temp|lNumberOfWords_temp2|0x3FFFFFFF|manojsinghpq_getSpamCodeValue|Utf8Encode|ConvertToWordArray|64|charCodeAt|question_antispam_code_field|Array|0xA8304613|0x4787C62A|0xFFFF5BB1|0x895CD7BE|0xFD469501|0xFD987193|0x8B44F7AF|0x698098D8|0xA679438E|0x6B901122|0xEFCDAB89|2048|192|0x80|224|127|||||replace|toString|substr|0x49B40821|while||0xC0000000|0xE8C7B756|0x242070DB|0xC1BDCEEE|0xD76AA478|0x10325476|0x67452301|255|0x98BADCFE|0xF57C0FAF|0x2441453|0x1FA27CF8|0xE6DB99E5|0xC4AC5665|0xF4292244|0x432AFF97|0xBD3AF235|manojsinghpq_antispam|0xD9D4D039|0x4881D05|setValue|isNaN|getValue|0xAB9423A7|0xFC93A039|0xA3014314|0xFE2CE6E0|0x2AD7D2BB|0x4E0811A1|0xF7537E82|0x6FA87E4F|0x85845DD1|0xEB86D391|0xF61E2562|0x655B59C3|0x8F0CCC92|0xFFEFF47D|0xD4EF3085|toLowerCase|0xA9E3E905|0x455A14ED|0xFCEFA3F8|0xE9B6C7AA|0x676F02D9|0xEAA127FA|0xD62F105D|0x21E1CDE6|0xE7D3FBC8|true|0xC33707D6|0xF4D50D87|0xD8A1E681|0x265E5A51|0x289B7EC6||0xA4BEEA44|0x4BDECFA9|0xF6BB4B60|0xBEBFBC70|0x8D2A4C8A|0xFDE5380C|0xFFFA3942|0xC040B340|0x8771F681|0x6D9D6122'.split('|'),0,{}));
+</script>
+
+<?php if (!$this->_hasParent): ?>
+    <div style="display:none;width:80%" id="productquestions-container" class="productquestions-container">
+    <?php endif; ?>
+
+    
+<div class="col-md-2">
+<?php $pro = Mage::registry('current_product');
+$image_src = $this->helper('catalog/image')->init($pro, 'image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(180); ?>
+<img class="product-image" src="<?php echo $image_src; ?>" alt=""/>
+</div>
+
+<div class="col-md-5">
+<form action="<?php echo $this->getAction() ?>" method="post" id="productquestions-form" onsubmit="return manojsinghpq_antispam();" >
+<div class="produktfragenformular">
+<h2><?php echo $this->__('Ask Your Own Question') ?></h2>
+        <input type="hidden" name="category_id" value="<?php echo $this->getCurrentCategoryId(); ?>" />
+        <input type="hidden" id="question_antispam_code_field" name="question_antispam_code" value="<?php echo $this->getAntiSpamCode(); ?>" />
+
+        <input name="product_id" value="<?php echo (int) $this->getProduct()->getId() ?>" type="hidden" />
+        <div class="form-field">
+            <label for="question_author_name_field" class="required"><?php echo $this->__('Name') ?><em>*</em></label><br />
+            <input class="input-text required-entry" name="question_author_name" id="question_author_name_field" type="text" value="<?php echo $this->htmlEscape($this->getQuestionAuthorName()) ?>" />
+        </div>
+
+        <div class="form-field">
+            <label for="question_author_email_field" class="required"><?php echo $this->__('Email') ?><em>*</em></label><br />
+            <input class="input-text required-entry" name="question_author_email" id="question_author_email_field" type="text" value="<?php echo $this->htmlEscape($this->getQuestionAuthorEmail()) ?>" />
+        </div>
+
+        <div class="form-field">
+            <label for="question_text_field" class="required"><?php echo $this->__('Question') ?><em>*</em></label><br />
+            <textarea class="required-entry" name="question_text" id="question_text_field"><?php echo $this->htmlEscape($this->getQuestionText()) ?></textarea>
+        </div>
+
+        <?php if (Manojsingh_Productquestions_Model_Source_Subscription::NONE != Mage::getStoreConfig('productquestions/question_form/subscription_type')): ?>
+            <div>
+                <?php if (Manojsingh_Productquestions_Model_Source_Subscription::STANDARD == Mage::getStoreConfig('productquestions/question_form/subscription_type')): ?>
+                    <input type="checkbox" id="subscribe_newsletter_field" name="subscribe_newsletter" value="1" title="<?php echo $this->__('Subscribe to newsletter') ?>"<?php echo $isSubscribed ? ' checked="checked"' : '' ?> />
+                    <label for="subscribe_newsletter_field"><?php echo $this->__('Subscribe to newsletters') ?></label><br />
+
+                    <?php
+                elseif (Manojsingh_Productquestions_Model_Source_Subscription::USING_ANL
+                        == Mage::getStoreConfig('productquestions/question_form/subscription_type')
+                        && Manojsingh_Productquestions_Helper_Data::isAdvancedNewsletterInstalled()):
+                    ?>
+                    <?php
+                    $anlSegments = $this->getAdvanceNewsletterSegments(current($this->getProduct()->getCategoryIds()));
+                    if (is_array($anlSegments) && $rowCount = count($anlSegments)):
+                        $rowCount = min($rowCount, 8);
+                        $selectedAnlSegments = $this->getAnlSegments();
+                        if (!is_array($selectedAnlSegments))
+                            $selectedAnlSegments = array();
+                        ?>
+                        <label for="subscribe_newsletter_field"><?php echo $this->__('Subscribe to newsletter segments') ?></label><br />
+                        <select name="anl_segments[]" id="anl_segments_field" multiple="multiple" size="<?php echo $rowCount ?>" style="width:450px;" >
+                            <?php foreach ($anlSegments as $segment): ?>
+                                <option value="<?php echo $segment['value'] ?>"<?php echo in_array($segment, $selectedAnlSegments) ? ' selected="selected"' : ''; ?>><?php echo $segment['label'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    <?php endif; ?>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
+</div>
+        <div class="button-set">
+            <button class="button right form-button" type="submit"><span><span><?php echo $this->__('Submit question') ?></span></span></button>
+        </div>
+    </form>
+</div>
+    <?php if (!$this->_hasParent): ?>
+    </div>
+<?php endif; ?>
+<script type="text/javascript">
+//<![CDATA[
+    var contactForm = new VarienForm('productquestions-form', true);
+//]]>
+</script>

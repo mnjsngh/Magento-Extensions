@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <catalog>
+            <children>
+                <productquestions module="productquestions">
+                    <title>Product Questions</title>
+                    <sort_order>71</sort_order>
+                    <children>
+                        <all module="productquestions">
+                            <title>Questions</title>
+                            <sort_order>20</sort_order>
+                            <action>productquestions/adminhtml_index</action>
+                        </all>
+                        <settings module="productquestions">
+                            <title>Settings</title>
+                            <sort_order>30</sort_order>
+                            <action>adminhtml/system_config/edit/section/productquestions</action>
+                        </settings>
+                    </children>
+                </productquestions>
+            </children>
+        </catalog>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <catalog>
+                        <children>
+                            <productquestions>
+                                <title>Productquestions Module</title>
+                                <children>
+                                    <all translate="title">
+                                        <title>All Questions</title>
+                                    </all>
+                                    <settings translate="title">
+                                        <title>Settings</title>
+                                    </settings>
+                                </children>
+                                <sort_order>10</sort_order>
+                            </productquestions>
+                        </children>
+                    </catalog>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <productquestions>
+                                        <title>Manojsingh - Product Questions Section</title>
+                                    </productquestions>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

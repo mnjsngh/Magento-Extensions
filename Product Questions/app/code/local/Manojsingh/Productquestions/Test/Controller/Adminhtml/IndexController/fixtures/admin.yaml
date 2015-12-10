@@ -1,0 +1,62 @@
+tables:
+  admin/user:
+    -
+      user_id: 1
+      firstname: Store
+      lastname: Owner
+      email: owner@example.com
+      username: admin
+      password: 60c320903e22e3cdd29b614b126941d1:yC
+      created: 2008-08-07 14:39:09
+      modified: 2008-12-27 20:51:54
+      logdate: 2008-12-27 21:05:00
+      lognum: 2
+      reload_acl_flag: 0
+      is_active: 1
+    -
+      user_id: 2
+      firstname: Andrej
+      lastname: Fedorov
+      email: helpdeskult@yandex.ru
+      username: master
+      password: 6d509a7437c2aee765ed0a301778b4c2:Gx
+      created: 2011-02-09 08:40:45
+      modified: 2011-02-10 08:32:12
+      logdate: 2011-10-03 07:18:58
+      lognum: 68
+      reload_acl_flag: 0
+      is_active: 1
+  admin/role:
+    -
+      role_id: 1
+      parent_id: 0
+      tree_level: 1
+      sort_order: 1
+      role_type: G
+      user_id: 0
+      role_name: Administrators
+    -
+      role_id: 3
+      parent_id: 1
+      tree_level: 1
+      sort_order: 0
+      role_type: U
+      user_id: 1
+      role_name: Store
+    -
+      role_id: 5
+      parent_id: 1
+      tree_level: 2
+      sort_order: 0
+      role_type: U
+      user_id: 2
+      role_name: Andrej
+  admin/rule:
+    -
+      rule_id: 1
+      role_id: 1
+      resource_id: all
+      privileges:
+      assert_id: 0
+      role_type: G
+      permission: allow

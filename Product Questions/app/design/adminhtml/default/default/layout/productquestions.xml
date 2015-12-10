@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <productquestions_admin_adminhtml_index_index>
+        <reference name="content">
+            <block type="productquestions/adminhtml_productquestions" name="productquestions" />
+        </reference>
+    </productquestions_admin_adminhtml_index_index>
+    <adminhtml_catalog_product_edit>
+        <reference name="product_tabs">
+            <action method="addTab">                
+                <name>Productquestions_product_tab</name>         
+                <block helper="productquestions/producttab/getTabparams" /> 
+            </action>
+        </reference>
+    </adminhtml_catalog_product_edit>
+</layout>

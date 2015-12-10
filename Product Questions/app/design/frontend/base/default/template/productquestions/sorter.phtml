@@ -1,0 +1,20 @@
+<?php
+$allowedSortings = Manojsingh_Productquestions_Block_Sorter::getAllowedSorting();
+if (count($allowedSortings)):
+    list($sortOrder, $sortDir) = $this->getCurrentSorting();
+    $invertedDir = Manojsingh_Productquestions_Block_Sorter::getInvertedDir($sortDir);
+    ?>
+
+    <div class="pager">
+        <div class="limiter">
+    <?php echo $this->__('Sort by') ?>
+            <select onchange="setLocation(this.value)" style="width:120px;">
+            <?php foreach ($allowedSortings as $sortKey => $sortName): ?>
+                    <option value="<?php echo $this->getSortOrderUrl($sortKey) ?>" <?php if ($sortKey == $sortOrder): ?> selected="selected"<?php endif ?>> <?php echo $sortName ?></option>
+                <?php endforeach ?>
+            </select>
+           <a href="<?php echo $this->getSortDirUrl($invertedDir) ?>"><img src="<?php echo $this->getSkinUrl('images/productquestions/sort_' . strtolower($sortDir) . '_arrow.gif') ?>" alt="<?php echo Manojsingh_Productquestions_Model_Source_Question_Sorting::getSortDirDescription($invertedDir) ?>" /></a>
+        </div>
+    </div>
+
+<?php endif; ?>

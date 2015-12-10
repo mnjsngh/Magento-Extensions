@@ -1,0 +1,11 @@
+eav:
+   customer:
+    - entity_id: 1
+      attribute_set_id: 0 # Fix issue with customer entity load
+      website_id: 1
+      store_id: 1
+      created_in: Default Store
+      group_id: 1
+      firstname: John
+      lastname: Doe
+      email: john@doe.com

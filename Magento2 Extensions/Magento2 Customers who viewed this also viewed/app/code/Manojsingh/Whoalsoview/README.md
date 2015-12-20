@@ -1,9 +1,10 @@
 This extension will suggest your site visitors with products which were mostly seen by other customers.
 These suggestions display on product pages that are based on the current product.
 
-The settings is under Stores->Configuration->MANOJ SINGH->Customer Who Viewed This Item Also Viewed
+The settings is under Stores->Configuration->MANOJ SINGH->Customer Who Viewed This Item Also Viewed.
 
 The options are:
+
 1. Enabled:- You can enable or disable extension by selecting Yes/No options.
 
 2. Title:- You can customize the block heading with your own choice. It is required field with Magento default validation.
